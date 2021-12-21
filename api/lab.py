@@ -7,7 +7,7 @@ class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         path = self.path
         url_components = parse.urlunsplit(path)
-        query_list = parse.parse_qsl(url_components)
+        query_list = parse.parse_qsl(url_components.query)
         dic = dict(query_list)
 
         name = dic.get("name")
