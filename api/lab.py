@@ -16,7 +16,7 @@ class handler(BaseHTTPRequestHandler):
         if name:
             message = f"Hello {name}! Todays date and time is: {date_time}\n You are using Python version: {platform.python_version()}"
         else:
-            message = "You are a stranger. No date and time available\n No Python version available. Enter a query name in the url!"
+            message = "You are a stranger. No date and time available\n No Python version available. Enter a query name in the url!\n Example: serverless-vercel.app/api/lab?name=yourName"
 
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
